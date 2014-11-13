@@ -63,17 +63,21 @@ function loadChunks(dir)
 	local files = love.filesystem.getDirectoryItems(dir)
 	chunks = {}
 	for iter,file in pairs(files) do
+		print("callbacks: "..file.." found")
+	end
+	for iter,file in pairs(files) do
 		filename = file:split(".")
 		name, ext = unpack(filename)
 		if ext == "lua" then
+			print("callbacks: loading "..name.." callback...")
 			--assert(loadstring('chunks.'..name..' = assert(loadfile("'..dir..'/'..file..'")())')())
-			_G["foundation"][name] = assert(loadfile(dir.."/"..file))
-			print(file.." callback loaded")
+			_G["foundation"][name] = assert(loadfile(dir.."/"..file), "callbacks: failed to load "..file)
+			print("callbacks: "..name.." callback loaded")
 		else
 			if love.filesystem.isDirectory(file) then
-				print(file.." is a directory")
+				print("callbacks: "..file.." is a directory")
 			else
-				print(file.." is not a valid chunk")
+				print("callbacks: "..file.." is not a lua file")
 			end
 		end
 	end
