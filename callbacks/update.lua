@@ -11,3 +11,7 @@ if Controllers.isPressed('lurker_update') then
 	print("Scan completed")
 	updateProfiler:startCycle()
 end
+
+if Controllers.isPressed('global_quit') then
+	love.event.push('quit')
+end

@@ -1,4 +1,8 @@
+if configuration.debug then
+
 require 'lovedebug'
+
+end
 
 function love.load()
 
@@ -10,7 +14,7 @@ This pack claims no copyright over any code in the modules folder.
 All modules are copyright to their respective owners.
 ]])
 
-	require 'module-loader'
+	require 'foundation-loader'
 
 	-- PROBE
 	print("--- Initialising profilers ---")

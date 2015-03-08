@@ -2,8 +2,14 @@
 
 ##v0.3
 
+- changed module-loader to foundation-loader
+- included modules
+ - lovetoys
+? implemented media packs
+? implemented entity system
 
 ##v0.2
+
 - added callback file functionality to module-loader
 - included various modules
  - babel
@@ -21,6 +27,7 @@
 - created docs folder, filled with READMEs from repos 
 
 ##v0.1
+
 - created module-loader.lua
 - included various modules
  - cas

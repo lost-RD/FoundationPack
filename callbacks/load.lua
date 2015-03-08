@@ -9,8 +9,9 @@ Controllers.init({
     menu_up = {type="button", default={'kb_up','gpb_dpup','gpa_lefty_-'}},
     menu_down = {type="button", default={'kb_down','gpb_dpdown','gpa_lefty_+'}},
     menu_select = {type="button", default={'kb_return','gpb_a'}},
-    menu_back = {type="button", default={'kb_escape','gpb_b'}},
+    --menu_back = {type="button", default={'kb_escape','gpb_b'}},
     lurker_update = {type="button", default={'kb_'..lurker_scan_key}},
+    global_quit = {type="button", default={'kb_escape','gpb_b'}},
 })
 Controllers.setPlayer('player_1','keyboard',1)
 

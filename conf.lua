@@ -1,8 +1,11 @@
+configuration = {}
+
 function love.conf(t)
     t.identity = nil                   -- The name of the save directory (string)
     t.version = "0.9.1"                -- The LÖVE version this game was made for (string)
-    t.console = true                  -- Attach a console (boolean, Windows only)
+    t.console = true                   -- Attach a console (boolean, Windows only)
     t.author = "lost_RD"
+    t.debug = false                    -- prevents loading of lovedebug
 
     t.window.title = "FoundationPack"        -- The window title (string)
     t.window.icon = nil                -- Filepath to an image to use as the window's icon (string)
@@ -34,4 +37,6 @@ function love.conf(t)
     t.modules.timer = true             -- Enable the timer module (boolean)
     t.modules.window = true            -- Enable the window module (boolean)
     t.modules.thread = true            -- Enable the thread module (boolean)
+
+    configuration = t
 end
